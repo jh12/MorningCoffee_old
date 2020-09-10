@@ -6,7 +6,7 @@ namespace MorningCoffee.Shared.Exceptions
     {
         public readonly string FileName;
 
-        public ProcessStartException(string fileName, string message = null, Exception innerException = null) : base(message, innerException)
+        public ProcessStartException(string fileName, string? message = null, Exception? innerException = null) : base(message, innerException)
         {
             FileName = fileName;
         }
