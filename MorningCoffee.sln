@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MorningCoffee.CLI", "MorningCoffee.CLI\MorningCoffee.CLI.csproj", "{7CB5A227-5476-4002-AEC3-B10CD1219316}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorningCoffee.Shared", "MorningCoffee.Shared\MorningCoffee.Shared.csproj", "{6D1E19E7-D03D-4F9D-B286-5545B8C4FB83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MorningCoffee.Shared", "MorningCoffee.Shared\MorningCoffee.Shared.csproj", "{6D1E19E7-D03D-4F9D-B286-5545B8C4FB83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorningCoffee", "MorningCoffee\MorningCoffee.csproj", "{F3F31C2E-432F-410A-B71A-25E5539B2B0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MorningCoffee", "MorningCoffee\MorningCoffee.csproj", "{F3F31C2E-432F-410A-B71A-25E5539B2B0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

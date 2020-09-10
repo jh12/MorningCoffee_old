@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using MorningCoffee.Shared.Exceptions;
-using MorningCoffee.Shared.Services.Interfaces;
+using MorningCoffee.Shared.Services;
 
 namespace MorningCoffee.Services
 {

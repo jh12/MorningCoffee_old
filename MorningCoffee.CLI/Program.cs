@@ -1,12 +1,17 @@
-﻿using System;
+﻿using System.Threading.Tasks;
+using MorningCoffee.Services;
+using MorningCoffee.Shared.Services;
 
 namespace MorningCoffee.CLI
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (MorningCoffee morningCoffee = new MorningCoffee())
+            {
+                await morningCoffee.DoRoutinesAsync();
+            }
         }
     }
 }
