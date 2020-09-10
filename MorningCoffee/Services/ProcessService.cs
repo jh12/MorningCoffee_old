@@ -17,34 +17,33 @@ namespace MorningCoffee.Services
             return Task.FromResult(processes.Any());
         }
 
-        public Task StartProcess(string fileNameOrPath, string arguments)
+        public Task StartProcess(string fileNameOrPath, string? arguments)
         {
-            using (Process process = new Process())
+            using Process process = new Process();
+
+            process.StartInfo.FileName = fileNameOrPath;
+            process.StartInfo.Arguments = arguments;
+            process.StartInfo.UseShellExecute = false;
+
+            bool isStarted;
+
+            try
             {
-                process.StartInfo.FileName = fileNameOrPath;
-                process.StartInfo.Arguments = arguments;
-                process.StartInfo.UseShellExecute = false;
-
-                bool isStarted;
-
-                try
-                {
-                    isStarted = process.Start();
-                }
-                catch (InvalidOperationException e)
-                {
-                    throw new ProcessNotFoundException(fileNameOrPath, e.Message, e);
-                }
-                catch (Win32Exception e)
-                {
-                    throw new ProcessStartException(fileNameOrPath, e.Message, e);
-                }
-
-                if(!isStarted)
-                    throw new ProcessStartException(fileNameOrPath);
-
-                return Task.CompletedTask;
+                isStarted = process.Start();
             }
+            catch (InvalidOperationException e)
+            {
+                throw new ProcessNotFoundException(fileNameOrPath, e.Message, e);
+            }
+            catch (Win32Exception e)
+            {
+                throw new ProcessStartException(fileNameOrPath, e.Message, e);
+            }
+
+            if(!isStarted)
+                throw new ProcessStartException(fileNameOrPath);
+
+            return Task.CompletedTask;
         }
     }
 }

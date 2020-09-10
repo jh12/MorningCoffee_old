@@ -7,8 +7,8 @@
 
     public class ProcessDefinition
     {
-        public string Name { get; set; }
-        public string FileNameOrPath { get; set; }
+        public string Name { get; set; } = null!;
+        public string FileNameOrPath { get; set; } = null!;
         public string? Arguments { get; set; }
     }
 }
